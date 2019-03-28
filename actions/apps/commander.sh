@@ -14,7 +14,7 @@ commander_configure_repo ()
     __commander_configure "$choice" "$CORE_DIR" "$CORE_TOKEN" "$CORE_NETWORK" "$EXPLORER_REPO" "$EXPLORER_DIR"
 
     if [[ -d "$CORE_DIR" ]]; then
-        warning "ARK Core will be pointed to ${CORE_REPO}. This will restart your node."
+        warning "OCKHAM Core will be pointed to ${CORE_REPO}. This will restart your node."
 
         press_to_continue
 
@@ -45,7 +45,7 @@ commander_configure_core_directory ()
     __commander_configure "$CORE_REPO" "$choice" "$CORE_TOKEN" "$CORE_NETWORK" "$EXPLORER_REPO" "$EXPLORER_DIR"
 
     if [[ -d "$CORE_DIR" ]]; then
-        warning "ARK Core will be stopped and moved to ${CORE_DIR}. This will restart your node."
+        warning "OCKHAM Core will be stopped and moved to ${CORE_DIR}. This will restart your node."
 
         press_to_continue
 
@@ -100,7 +100,7 @@ commander_configure_explorer_repo ()
     __commander_configure "$CORE_REPO" "$CORE_DIR" "$CORE_TOKEN" "$CORE_NETWORK" "$choice" "$EXPLORER_DIR"
 
     if [[ -d "$EXPLORER_DIR" ]]; then
-        warning "ARK Explorer will be pointed to ${EXPLORER_REPO}. This will restart your explorer."
+        warning "OCKHAM Explorer will be pointed to ${EXPLORER_REPO}. This will restart your explorer."
 
         press_to_continue
 
@@ -131,7 +131,7 @@ commander_configure_explorer_directory ()
     __commander_configure "$CORE_REPO" "$CORE_DIR" "$CORE_TOKEN" "$CORE_NETWORK" "$EXPLORER_REPO" "$choice"
 
     if [[ -d "$EXPLORER_DIR" ]]; then
-        warning "ARK Explorer will be stopped and moved to ${EXPLORER_DIR}. This will restart your explorer."
+        warning "OCKHAM Explorer will be stopped and moved to ${EXPLORER_DIR}. This will restart your explorer."
 
         press_to_continue
 

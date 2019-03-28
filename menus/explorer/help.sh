@@ -4,28 +4,28 @@ menu_manage_explorer_help ()
 {
     ascii
 
-    text_yellow "    Install Ark Explorer (I)"
-    text_white "    installs Ark Explorer on your server."
+    text_yellow "    Install OCKHAM Explorer (I)"
+    text_white "    installs OCKHAM Explorer on your server."
     echo
 
-    text_yellow "    Stop Ark Explorer (K)"
-    text_white "    stops the Ark Explorer process (shown only if the Ark Explorer process is running)."
+    text_yellow "    Stop OCKHAM Explorer (K)"
+    text_white "    stops the OCKHAM Explorer process (shown only if the OCKHAM Explorer process is running)."
     echo
 
-    text_yellow "    Start Ark Explorer (S)"
-    text_white "    starts the Ark Explorer process (shown only if Ark Explorer is installed)."
+    text_yellow "    Start OCKHAM Explorer (S)"
+    text_white "    starts the OCKHAM Explorer process (shown only if OCKHAM Explorer is installed)."
     echo
 
-    text_yellow "    Restart Ark Explorer (R)"
-    text_white "    restarts (stops and then starts) the Ark Explorer process (shown only if Ark Explorer is installed and running)."
+    text_yellow "    Restart OCKHAM Explorer (R)"
+    text_white "    restarts (stops and then starts) the OCKHAM Explorer process (shown only if OCKHAM Explorer is installed and running)."
     echo
 
-    text_yellow "    Update Ark Explorer (U)"
-    text_white "    updates Ark Explorer if a new version is available (shown only if Ark Explorer is installed)."
+    text_yellow "    Update OCKHAM Explorer (U)"
+    text_white "    updates OCKHAM Explorer if a new version is available (shown only if OCKHAM Explorer is installed)."
     echo
 
-    text_yellow "    Uninstall Ark Explorer (P)"
-    text_white "    uninstalls Ark Explorer from your system (shown only if Ark Explorer is installed)."
+    text_yellow "    Uninstall OCKHAM Explorer (P)"
+    text_white "    uninstalls OCKHAM Explorer from your system (shown only if OCKHAM Explorer is installed)."
     echo
 
     text_yellow "    Show Log (L)"
@@ -37,7 +37,7 @@ menu_manage_explorer_help ()
 
     divider
 
-    text_blue "    For more information head over to https://docs.ark.io/"
+    text_blue "    For more information head over to https://docs.ockham.consulting/"
     echo
 
     press_to_continue

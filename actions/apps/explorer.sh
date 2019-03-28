@@ -4,7 +4,7 @@ explorer_install ()
 {
     ascii
 
-    heading "Installing Ark Explorer..."
+    heading "Installing OCKHAM Explorer..."
 
     sudo mkdir "$EXPLORER_DIR" >> "$commander_log" 2>&1
     sudo chown "$USER":"$USER" "$EXPLORER_DIR" >> "$commander_log" 2>&1
@@ -36,7 +36,7 @@ explorer_install ()
         return
     fi
 
-    success "Installed Ark Explorer!"
+    success "Installed OCKHAM Explorer!"
 }
 
 explorer_uninstall ()
@@ -45,13 +45,13 @@ explorer_uninstall ()
 
     explorer_stop
 
-    heading "Uninstalling Ark Explorer..."
+    heading "Uninstalling OCKHAM Explorer..."
 
     cd "$commander_dir"
 
     sudo rm -rf "$EXPLORER_DIR"
 
-    success "Uninstalled Ark Explorer!"
+    success "Uninstalled OCKHAM Explorer!"
 }
 
 explorer_update ()
@@ -69,11 +69,11 @@ explorer_update ()
     if [[ "$remote_version" == "$local_version" ]]; then
         STATUS_EXPLORER_UPDATE="No"
 
-        info "You already have the latest supported Ark Explorer version."
+        info "You already have the latest supported OCKHAM Explorer version."
     else
         STATUS_EXPLORER_UPDATE="Yes"
 
-        read -p "An update is available for Ark Explorer, do you want to install it? [Y/n] : " choice
+        read -p "An update is available for OCKHAM Explorer, do you want to install it? [Y/n] : " choice
 
         if [[ -z "$choice" || "$choice" =~ ^(yes|y|Y) ]]; then
             explorer_stop
@@ -96,7 +96,7 @@ explorer_start ()
 
     heading "Starting Explorer..."
 
-    pm2 start $commander_ecosystem --only ark-explorer >> "$commander_log" 2>&1
+    pm2 start $commander_ecosystem --only ock-explorer >> "$commander_log" 2>&1
 
     success "Started Explorer!"
 }
@@ -107,7 +107,7 @@ explorer_restart ()
 
     heading "Restarting Explorer..."
 
-    pm2 restart $commander_ecosystem --only ark-explorer >> "$commander_log" 2>&1
+    pm2 restart $commander_ecosystem --only ock-explorer >> "$commander_log" 2>&1
 
     success "Restarted Explorer!"
 }
@@ -118,7 +118,7 @@ explorer_stop ()
 
     heading "Stopping Explorer..."
 
-    pm2 stop $commander_ecosystem --only ark-explorer >> "$commander_log" 2>&1
+    pm2 stop $commander_ecosystem --only ock-explorer >> "$commander_log" 2>&1
 
     success "Stopped Explorer!"
 }
@@ -129,12 +129,12 @@ explorer_logs ()
     echo -e "\n$(text_yellow " Use Ctrl+C to return to menu")\n"
     trap : INT
 
-    pm2 logs ark-explorer
+    pm2 logs ock-explorer
 }
 
 explorer_status ()
 {
-    local status=$(pm2status "ark-explorer" | awk '{print $13}')
+    local status=$(pm2status "ock-explorer" | awk '{print $13}')
 
     if [[ "$status" == "online" ]]; then
         STATUS_EXPLORER="On"

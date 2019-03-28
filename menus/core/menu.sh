@@ -7,9 +7,9 @@ menu_manage_core ()
     forger_status
     relay_status
 
-    text_white "    U. Update Ark Core"
-    text_white "    P. Uninstall Ark Core"
-    text_white "    C. Configure Ark Core"
+    text_white "    U. Update OCKHAM Core"
+    text_white "    P. Uninstall OCKHAM Core"
+    text_white "    C. Configure OCKHAM Core"
 
     divider
 

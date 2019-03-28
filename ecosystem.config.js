@@ -13,14 +13,14 @@ const getPasswordFromArgs = () => {
 
 module.exports = {
   apps : [{
-    name: 'ark-core-relay',
+    name: 'ock-core-relay',
     script: `${process.env.CORE_DIR}/packages/core/dist/index.js`,
     args: `relay --network ${process.env.CORE_NETWORK}`,
     max_restarts: 5,
     min_uptime: '5m',
     kill_timeout: 30000
   }, {
-    name: 'ark-core-forger',
+    name: 'ock-core-forger',
     script: `${process.env.CORE_DIR}/packages/core/dist/index.js`,
     args: `forger --network ${process.env.CORE_NETWORK}`,
     max_restarts: 5,
@@ -31,9 +31,9 @@ module.exports = {
         CORE_FORGER_PASSWORD: getPasswordFromArgs()
     }
   }, {
-    name: 'ark-explorer',
+    name: 'ock-explorer',
     script: `${process.env.EXPLORER_DIR}/express-server.js`,
-    args: `--name ark-explorer`,
+    args: `--name ock-explorer`,
     max_restarts: 5,
     min_uptime: '5m',
     kill_timeout: 30000,

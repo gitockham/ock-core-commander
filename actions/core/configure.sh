@@ -22,7 +22,7 @@ core_configure ()
     local configured=false
 
     if [[ -d "$CORE_PATH_CONFIG" ]]; then
-        read -p "We found an Ark Core configuration, do you want to overwrite it? [y/N] : " choice
+        read -p "We found an OCKHAM Core configuration, do you want to overwrite it? [y/N] : " choice
 
         if [[ "$choice" =~ ^(yes|y|Y) ]]; then
             __core_configure_pre
@@ -56,7 +56,7 @@ core_configure ()
     fi
 
     if [[ "$configured" = true ]]; then
-        read -p "Ark Core has been configured, would you like to start the relay? [Y/n] : " choice
+        read -p "OCKHAM Core has been configured, would you like to start the relay? [Y/n] : " choice
 
         if [[ -z "$choice" || "$choice" =~ ^(yes|y|Y) ]]; then
             relay_start
@@ -167,7 +167,7 @@ __core_configure_environment ()
     grep -q '^CORE_DB_PORT' "${envFile}" 2>&1 || echo "CORE_DB_PORT=5432" >> "$envFile" 2>&1
     grep -q '^CORE_DB_USERNAME' "${envFile}" 2>&1 || echo "CORE_DB_USERNAME=${USER}" >> "$envFile" 2>&1
     grep -q '^CORE_DB_PASSWORD' "${envFile}" 2>&1 || echo "CORE_DB_PASSWORD=password" >> "$envFile" 2>&1
-    grep -q '^CORE_DB_DATABASE' "${envFile}" 2>&1 || echo "CORE_DB_DATABASE=ark_$1" >> "$envFile" 2>&1
+    grep -q '^CORE_DB_DATABASE' "${envFile}" 2>&1 || echo "CORE_DB_DATABASE=ock_$1" >> "$envFile" 2>&1
 
     grep -q '^CORE_P2P_HOST' "$envFile" 2>&1 || echo 'CORE_P2P_HOST=0.0.0.0' >> "$envFile" 2>&1
 

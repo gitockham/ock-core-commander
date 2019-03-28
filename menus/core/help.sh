@@ -6,15 +6,15 @@ menu_manage_core_help ()
 
     divider
 
-    text_yellow "    Update Ark (U)"
-    text_white "    update Ark Core if a new version is available."
+    text_yellow "    Update OCKHAM (U)"
+    text_white "    update OCKHAM Core if a new version is available."
     echo
 
-    text_yellow "    Uninstall Ark (P)"
-    text_white "    uninstall Ark Core from your system."
+    text_yellow "    Uninstall OCKHAM (P)"
+    text_white "    uninstall OCKHAM Core from your system."
     echo
 
-    text_yellow "    Configure Ark (C)"
+    text_yellow "    Configure OCKHAM (C)"
     text_white "    lets you select a network configuration and automatically creates the database for the config you chose."
     echo
 
@@ -23,7 +23,7 @@ menu_manage_core_help ()
 
     divider
 
-    text_blue "    For more information head on over to https://docs.ark.io/"
+    text_blue "    For more information head on over to https://docs.ockham.consulting/"
     echo
 
     press_to_continue
